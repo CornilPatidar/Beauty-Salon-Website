@@ -1,70 +1,58 @@
 import { useState } from 'react';
-import { FiMenu, FiX, FiSearch, FiHeart, FiShoppingCart, FiUser } from 'react-icons/fi';
+import { FiMenu, FiX, FiSearch, FiUser, FiHeart, FiShoppingCart } from 'react-icons/fi';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
-  const navItems = [
-    "Services",
-    "Shop",
-    "Bridal",
-    "Offers",
-    "Contact"
-  ];
+  const navItems = ["Services", "Shop", "Bridal", "Offers", "Contact"];
 
   return (
-    <header className="sticky top-0 z-50 shadow bg-white">
-      {/* Top bar */}
-      <div className="bg-black text-white flex items-center justify-between px-4 py-2 md:px-8">
-        {/* Mobile menu icon */}
+    <header className="sticky top-0 z-50 bg-white shadow-md">
+      <div className="flex items-center justify-between px-4 py-3 md:px-8 bg-black text-white">
+        {/* Left - Menu Icon (mobile) */}
         <div className="md:hidden">
-          <button onClick={() => setIsOpen(!isOpen)}>
+          <button onClick={() => setIsOpen(!isOpen)} aria-label="menu">
             {isOpen ? <FiX size={24} /> : <FiMenu size={24} />}
           </button>
         </div>
 
-        {/* Logo */}
-        <h1 className="text-xl md:text-2xl font-bold tracking-wide font-serif">
+        {/* Center - Logo */}
+        <h1 className="text-xl font-bold tracking-wider font-serif md:text-2xl">
           KumKum Beauty
         </h1>
 
-        {/* Icons */}
-        <div className="hidden md:flex gap-4 items-center text-white text-xl">
-          <FiSearch />
-          <FiUser />
-          <FiHeart />
-          <FiShoppingCart />
-          <button className="bg-gradient-to-r from-yellow-400 to-orange-400 text-black px-4 py-1 rounded font-semibold text-sm hover:scale-105 transition">
-            Book Appointment
+        {/* Right - Icons (desktop) */}
+        <div className="hidden md:flex items-center gap-4 text-xl">
+          <FiSearch className="cursor-pointer hover:text-pink-400" />
+          <FiUser className="cursor-pointer hover:text-pink-400" />
+          <FiHeart className="cursor-pointer hover:text-pink-400" />
+          <FiShoppingCart className="cursor-pointer hover:text-pink-400" />
+          <button className="bg-gradient-to-r from-yellow-300 to-orange-400 text-black px-3 py-1 rounded-md font-semibold text-sm hover:scale-105 transition">
+            Book
           </button>
         </div>
       </div>
 
-      {/* Bottom nav links */}
-      <div className="bg-white hidden md:flex items-center justify-center space-x-6 py-2 font-semibold uppercase text-sm tracking-wide text-black">
-        {navItems.map((item, i) => (
-          <a href="#" key={i} className="hover:text-pink-500 transition">{item}</a>
+      {/* Nav Links (desktop) */}
+      <nav className="hidden md:flex justify-center gap-6 py-3 font-semibold text-sm uppercase tracking-wide text-black bg-white">
+        {navItems.map((item, idx) => (
+          <a key={idx} href="#" className="hover:text-pink-500 transition">
+            {item}
+          </a>
         ))}
-      </div>
+      </nav>
 
-      {/* Mobile Nav (dropdown) */}
+      {/* Mobile Dropdown */}
       {isOpen && (
-        <div className="md:hidden bg-white text-black px-4 py-3 space-y-3 shadow-md">
-          {navItems.map((item, i) => (
-            <a
-              key={i}
-              href="#"
-              className="block border-b border-gray-200 pb-2 text-lg font-medium hover:text-pink-500"
-            >
+        <div className="md:hidden bg-white px-4 pb-4 pt-2 space-y-2 shadow-lg">
+          {navItems.map((item, idx) => (
+            <a key={idx} href="#" className="block border-b pb-2 text-base font-medium hover:text-pink-500">
               {item}
             </a>
           ))}
-
-          <div className="flex justify-end mt-4">
-            <button className="bg-gradient-to-r from-yellow-400 to-orange-400 text-black px-4 py-2 rounded font-semibold text-sm hover:scale-105 transition">
-              Book
-            </button>
-          </div>
+          <button className="mt-4 w-full bg-gradient-to-r from-yellow-300 to-orange-400 text-black py-2 rounded-md font-semibold text-sm">
+            Book Appointment
+          </button>
         </div>
       )}
     </header>
