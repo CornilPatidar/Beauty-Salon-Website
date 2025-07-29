@@ -1,0 +1,14 @@
+.container {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fce7f3; /* soft pink */
+  }
+  
+  .title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #db2777; /* pink-600 */
+    font-family: sans-serif;
+  }
