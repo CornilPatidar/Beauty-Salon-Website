@@ -1,5 +1,3 @@
-import React from 'react';
-
 const ContactButtons = () => {
   return (
     <div className="fixed bottom-4 right-4 flex flex-col gap-3 z-50">
