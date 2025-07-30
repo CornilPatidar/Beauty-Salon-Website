@@ -25,7 +25,7 @@ function App() {
          {/* Hero Section */}
          <main className="hero">
         <div className="hero-content">
-          <h1>Glow With Confidence</h1>
+          <h1 className="text-red-100">Glow With Confidence</h1>
           <p>Experience luxury beauty treatments tailored just for you.</p>
           <button className="hero-btn">Explore Services</button>
         </div>
