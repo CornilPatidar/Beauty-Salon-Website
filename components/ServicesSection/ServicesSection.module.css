@@ -1,8 +1,24 @@
-.servicesSection {
+  .servicesSection {
+    max-width: 1200px; /* keeps section narrower */
+    margin: 0 auto; /* centers it */
     background-color: white; /* Changed from dark to white */
-    padding: 50px 20px;
+    padding: 0 20px;
     text-align: center;
     color: black; /* Text color updated for light background */
+  }
+
+  .serviceCard {
+    flex: 1 1 250px; /* smaller cards */
+    max-width: 260px; /* prevent too wide */
+    border-radius: 12px; /* soft corners */
+    overflow: hidden; /* keep rounded corners clean */
+  }
+  
+  .servicesGrid {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap; /* so it still works on mobile */
   }
   
   .heading {
@@ -17,9 +33,37 @@
   
   .grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    /* grid-template-columns: repeat(4, minmax(280px, 1fr));  */
+    grid-template-columns: repeat(4, minmax(0, 1fr));
     gap: 20px;
+    width: 100%;
+    justify-items: center;  
   }
+
+  @media (max-width: 1024px) {
+    .grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (max-width: 600px) {
+    .grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  
+@media (min-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr); /* Tablet */
+  }
+}
+
+@media (min-width: 1024px) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr); /* Desktop */
+  }
+}
   
   /* Square cards */
   .card {
@@ -31,6 +75,7 @@
     box-shadow: 0 4px 20px rgba(0,0,0,0.15);
     cursor: pointer;
     aspect-ratio: 1 / 1; /* Forces square shape */
+    max-width: 260px;   /* Make them smaller */
   }
 
   .card:hover {
@@ -70,19 +115,7 @@
     text-decoration: underline;
   }
   
-  .moreServicesButton {
-    background: linear-gradient(135deg, #f9d976 0%, #f39f86 100%);
-    background-size: 200% 200%;
-    color: black;
-    font-weight: bold;
-    padding: 12px 28px;
-    border-radius: 8px;
-    border: none;
-    font-size: 16px;
-    cursor: pointer;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-  }
+
   
   .moreServicesButton {
     display: inline-block;
