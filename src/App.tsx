@@ -1,5 +1,6 @@
 import './App.css';
 import ServicesSection from "../components/ServicesSection/ServicesSection";
+import HeroSection from "../components/HeroSection/HeroSection";
 import BridalSection from "../components/BridalSection/BridalSection"
 import Navbar from "../components/Navbar";
 
@@ -18,6 +19,7 @@ function App() {
    
 
       <ServicesSection />
+      <HeroSection />
       <BridalSection /> 
 
          {/* Hero Section */}
