@@ -8,9 +8,9 @@ type Service = {
 };
 
 const services: Service[] = [
-  { title: "Hair Care", img: "services/hair-care.png", link: "#" },
-  { title: "Skin Care", img: "services/skin-care.png", link: "#" },
-  { title: "Body Care", img: "services/body-care.png", link: "#" },
+  { title: "Hair Care", img: "/services/hair-care.png", link: "#" },
+  { title: "Skin Care", img: "/services/skin-care.png", link: "#" },
+  { title: "Body Care", img: "/services/body-care.png", link: "#" },
   { title: "Bridal & Groom Make Up", img: "services/bridal-care.png", link: "#" }
 ];
 
