@@ -3,7 +3,7 @@
     margin: 0 auto; /* centers it */
     background-color: white; /* Changed from dark to white */
     padding: 0 20px;
-    padding-top: 60px;
+    margin-top: 30px;
     text-align: center;
     color: black; /* Text color updated for light background */
   }
