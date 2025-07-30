@@ -1,0 +1,176 @@
+.navbar {
+  background-color: black;
+  color: white;
+  padding: 12px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  font-family: serif;
+}
+
+.menuToggle {
+  display: none;
+  font-size: 24px;
+  background: none;
+  border: none;
+  color: white;
+}
+
+.icons {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+.bookButton {
+  background: linear-gradient(to right, #facc15, #f97316);
+  color: black;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+  border: none;
+  transition: transform 0.2s ease;
+}
+
+.bookButton:hover {
+  transform: scale(1.05);
+}
+
+.desktopOnly {
+  display: none;
+}
+
+.desktopNav a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.desktopNav a:hover {
+  color: #ff69b4; /* pink hover */
+}
+
+.navLinks {
+  display: none;
+  justify-content: center;
+  gap: 20px;
+  background: white;
+  padding: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.link {
+  color: black;
+  text-decoration: none;
+}
+
+.link:hover {
+  color: #ec4899;
+}
+
+.chevron {
+  margin-left: 4px;
+  font-size: 12px;
+}
+
+/* Desktop styles */
+@media (min-width: 768px) {
+  .desktopOnly {
+    display: flex !important; /* show desktop menu */
+  }
+
+  /* Hide fullscreen mobile menu if it was left open */
+  .navLinks.show {
+    display: none !important;
+  }
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+  .menuToggle {
+    display: block;
+  }
+
+  .icons {
+    display: none;
+  }
+
+  .navLinks {
+    display: none;
+    flex-direction: column;
+    padding: 24px;
+    background: black;
+    color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1000;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding-top: 100px;
+  }
+
+  .navLinks.show {
+    display: flex;
+  }
+
+  .navLinks .link {
+    color: white;
+    font-size: 16px;
+    padding: 12px 0;
+    width: 100%;
+    text-align: left;
+    text-transform: uppercase;
+    font-weight: 500;
+  }
+
+  .navLinks .link:hover {
+    color: #ff69b4;
+  }
+
+  .bookAppointmentMobile {
+    color: white;
+    font-size: 16px;
+    padding: 12px 0;
+    width: 100%;
+    text-align: left;
+    text-transform: uppercase;
+    font-weight: 500;
+    margin-top: 20px;
+  }
+
+  .bookAppointmentMobile:hover {
+    color: #ff69b4;
+  }
+
+  .closeButton {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 8px;
+  }
+
+  .closeButton:hover {
+    color: #ff69b4;
+  }
+
+  .desktopOnly {
+    display: none; /* hide desktop menu */
+  }
+}

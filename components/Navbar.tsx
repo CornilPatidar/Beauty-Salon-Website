@@ -1,36 +1,70 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import styles from './Navbar.module.css';
-import { FiMenu, FiX, FiSearch, FiUser, FiHeart, FiShoppingCart } from 'react-icons/fi';
+import { FiMenu, FiX, FiSearch, FiUser, FiHeart, FiShoppingCart, FiChevronDown } from 'react-icons/fi';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const navItems = ["Services", "Shop", "Bridal", "Offers", "Contact"];
+  const [isDesktop, setIsDesktop] = useState(false);
+  const navItems = [
+    { name: "Services", hasDropdown: true },
+    { name: "Shop", hasDropdown: true },
+    { name: "Bridal", hasDropdown: false },
+    { name: "Offer", hasDropdown: false },
+    { name: "Franchise", hasDropdown: true },
+    { name: "Salon Locator", hasDropdown: false },
+    { name: "Contact", hasDropdown: true }
+  ];
+
+  useEffect(() => {
+    const checkScreenSize = () => {
+      setIsDesktop(window.innerWidth >= 768);
+    };
+    
+    checkScreenSize();
+    window.addEventListener('resize', checkScreenSize);
+    
+    return () => window.removeEventListener('resize', checkScreenSize);
+  }, []);
 
   return (
     <header>
+      {/* Top Black Bar */}
       <div className={styles.navbar}>
         <button className={styles.menuToggle} onClick={() => setIsOpen(!isOpen)}>
           {isOpen ? <FiX /> : <FiMenu />}
         </button>
         <div className={styles.logo}>KumKum Beauty</div>
         <div className={styles.icons}>
-          <FiSearch />
-          <FiUser />
-          <FiHeart />
-          <FiShoppingCart />
-          <button className={styles.bookButton}>Book</button>
+         
+          <button className={styles.bookButton}>Book Reservation</button>
         </div>
       </div>
 
-      {(isOpen || window.innerWidth >= 768) && (
-        <nav className={styles.navLinks}>
-          {navItems.map((item, idx) => (
-            <a key={idx} href="#" className={styles.link}>
-              {item}
-            </a>
-          ))}
-        </nav>
-      )}
+      {/* Desktop White Navigation Bar */}
+      <nav className={`${styles.navLinks} ${styles.desktopOnly}`}>
+        {navItems.map((item, idx) => (
+          <a key={idx} href="#" className={styles.link}>
+            {item.name}
+            {item.hasDropdown && <FiChevronDown className={styles.chevron} />}
+          </a>
+        ))}
+      </nav>
+
+      {/* Mobile Navigation */}
+      <nav className={`${styles.navLinks} ${isOpen ? styles.show : ''}`}>
+        <button className={styles.closeButton} onClick={() => setIsOpen(false)}>
+          <FiX />
+        </button>
+        {navItems.map((item, idx) => (
+          <a key={idx} href="#" className={styles.link}>
+            {item.name}
+            {item.hasDropdown && <FiChevronDown className={styles.chevron} />}
+          </a>
+        ))}
+        <a href="#" className={styles.bookAppointmentMobile}>
+          Book Appointment
+        </a>
+      </nav>
     </header>
   );
 };
