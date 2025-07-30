@@ -1,0 +1,53 @@
+.brandsSection {
+    background: #fff;
+    padding: 25px 0; /* reduced padding so it sits closer to Bridal section */
+    text-align: center;
+    margin-top: 0; /* removes any accidental gap */
+  }
+  
+  .heading {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 15px; /* slightly reduced */
+    color: #222;
+  }
+  
+  .marquee {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+  }
+  
+  .track {
+    display: flex;
+    width: calc(200px * 12); /* slightly smaller width for smoother scrolling */
+    animation: scroll 30s linear infinite; /* slower, smoother */
+  }
+  
+  .brandLogo {
+    flex: 0 0 auto;
+    width: 160px; /* smaller so more logos visible at once */
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 15px; /* reduced gap between logos */
+  }
+  
+  .brandLogo img {
+    max-height: 55px;
+    max-width: 100%;
+    object-fit: contain;
+    filter: grayscale(20%);
+    transition: filter 0.3s ease;
+  }
+  
+  .brandLogo img:hover {
+    filter: grayscale(0%);
+  }
+  
+  @keyframes scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+  

@@ -3,13 +3,7 @@ import ServicesSection from "@/components/ServicesSection/ServicesSection";
 import HeroSection from "@/components/HeroSection/HeroSection";
 import BridalSection from "@/components/BridalSection/BridalSection"
 import Navbar from "@/components/Navbar";
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from "@/components/ui/carousel"
+import BrandsSection from "@/components/BrandsSection/BrandsSection";
 
 function App() {
   return (
@@ -28,16 +22,8 @@ function App() {
       <ServicesSection />
       <HeroSection />
       <BridalSection /> 
-
-      <Carousel>
-  <CarouselContent>
-    <CarouselItem>...</CarouselItem>
-    <CarouselItem>...</CarouselItem>
-    <CarouselItem>...</CarouselItem>
-  </CarouselContent>
-  <CarouselPrevious />
-  <CarouselNext />
-</Carousel>
+      <BrandsSection />
+      
 
          {/* Hero Section */}
          <main className="hero">

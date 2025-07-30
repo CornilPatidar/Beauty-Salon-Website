@@ -1,0 +1,20 @@
+.carouselSection {
+    width: 100%;
+    max-width: 1200px; /* align with other sections */
+    margin: 50px auto; /* spacing above & below */
+    padding: 0 20px; /* side padding for smaller screens */
+  }
+  
+  .carouselImage {
+    width: 100%;
+    max-height: 450px; /* prevent giant images */
+    object-fit: cover; /* crop nicely without stretching */
+    border-radius: 14px; /* soft corners */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+  }
+  
+  .carouselImage:hover {
+    transform: scale(1.02);
+  }
+  
