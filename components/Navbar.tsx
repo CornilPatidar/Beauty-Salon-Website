@@ -1,10 +1,10 @@
 import { useState, useEffect } from 'react';
 import styles from './Navbar.module.css';
-import { FiMenu, FiX, FiChevronDown } from 'react-icons/fi';
+import { FiMenu, FiX,  FiChevronDown } from 'react-icons/fi';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
- // const [isDesktop, setIsDesktop] = useState(false);
+  const [isDesktop, setIsDesktop] = useState(false);
   const navItems = [
     { name: "Services", hasDropdown: true },
     { name: "Shop", hasDropdown: true },
@@ -17,7 +17,7 @@ const Navbar = () => {
 
   useEffect(() => {
     const checkScreenSize = () => {
-      // setIsDesktop(window.innerWidth >= 768);
+      setIsDesktop(window.innerWidth >= 768);
     };
     
     checkScreenSize();
@@ -41,7 +41,7 @@ const Navbar = () => {
       </div>
 
       {/* Desktop White Navigation Bar */}
-      <nav className={`${styles.navLinks} ${styles.desktopOnly}`}>
+      <nav className={styles.desktopNav}>
         {navItems.map((item, idx) => (
           <a key={idx} href="#" className={styles.link}>
             {item.name}

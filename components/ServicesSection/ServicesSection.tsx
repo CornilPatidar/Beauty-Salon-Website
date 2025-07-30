@@ -36,7 +36,7 @@ const ServicesSection: React.FC = () => {
 
       <div style={{ textAlign: "center" }}>
         <button className={styles.moreServicesButton}>MORE SERVICES</button>
-      </div>
+        </div>
     </section>
   );
 };
