@@ -1,5 +1,6 @@
 import './App.css';
 import ServicesSection from "../components/ServicesSection/ServicesSection";
+import BridalSection from "../components/BridalSection/BridalSection"
 import Navbar from "../components/Navbar";
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
    
 
       <ServicesSection />
+      <BridalSection /> 
 
          {/* Hero Section */}
          <main className="hero">

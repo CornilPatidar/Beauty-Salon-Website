@@ -1,0 +1,94 @@
+/* This wrapper makes the background full width */
+.bridal-wrapper {
+    background: #fdf8f6; /* your section background color */
+    width: 100%;
+    margin-top: 40px;
+  }
+  
+  /* Actual content stays centered */
+  .bridal-section {
+    max-width: 1200px; /* matches other sections */
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px 8%;
+    flex-wrap: wrap;
+    gap: 30px;
+    
+  }
+  
+  .bridal-content {
+    flex: 1;
+    max-width: 500px;
+  }
+  
+  .bridal-content h2 {
+    font-size: 2.4rem;
+    font-weight: bold;
+    color: #222;
+    margin-bottom: 14px;
+  }
+  
+  .bridal-content p {
+    font-size: 1.15rem;
+    color: #444;
+    line-height: 1.7;
+    margin-bottom: 20px;
+  }
+  
+  .bridal-btn {
+    background: #d4a017;
+    color: white;
+    padding: 14px 32px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+  
+  .bridal-btn:hover {
+    background: #b98c13;
+  }
+  
+  .bridal-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .bridal-image img {
+    max-width: 90%;
+    height: auto;
+  }
+  
+  @media (max-width: 1024px) {
+    .bridal-section {
+      padding: 40px 5%;
+      gap: 20px; /* closer on smaller screens */
+    }
+  
+    .bridal-content h2 {
+      font-size: 2.2rem;
+    }
+  
+    .bridal-content p {
+      font-size: 1.05rem;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .bridal-section {
+      flex-direction: column;
+      text-align: center;
+      gap: 25px;
+    }
+  
+    .bridal-image {
+      justify-content: center;
+    }
+  
+    .bridal-image img {
+      margin-left: 0;
+    }
+  }
