@@ -1,0 +1,1 @@
+{"root":["./src/app.tsx","./src/main.tsx","./src/vite-env.d.ts","./components/contactbuttons.tsx","./components/hero.tsx","./components/navbar.tsx","./components/bridalsection/bridalsection.tsx","./components/servicessection/servicessection.tsx","./components/servicessection/servicesdata.ts"],"errors":true,"version":"5.8.3"}

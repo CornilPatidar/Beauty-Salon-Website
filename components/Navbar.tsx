@@ -4,7 +4,7 @@ import { FiMenu, FiX,  FiChevronDown } from 'react-icons/fi';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [isDesktop, setIsDesktop] = useState(false);
+  const [isDesktop, setIsDesktop] = useState(false); // eslint-disable-line @typescript-eslint/no-unused-vars
   const navItems = [
     { name: "Services", hasDropdown: true },
     { name: "Shop", hasDropdown: true },
