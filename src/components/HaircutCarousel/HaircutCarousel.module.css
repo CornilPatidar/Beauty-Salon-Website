@@ -1,54 +1,93 @@
+/* 🎯 This is the main container for the haircut carousel section */
 .haircutCarouselSection {
-    background: url("/images/hero-bg.jpg") center/cover no-repeat; /* ✅ Use your background image */
+    /* Use a background image that covers the whole section and stays centered */
+    background: url("/images/hero-bg.jpg") center/cover no-repeat;
+    /* Add padding inside the section: 40px top/bottom, 20px left/right */
     padding: 40px 20px;
-  }
-  
-  .sectionTitle {
+}
+
+/* 🎯 This styles the big title text (e.g., "Explore Women's Haircuts") */
+.sectionTitle {
+    text-align: center; /* Put the text in the middle horizontally */
+    font-size: 2rem; /* Make the title big */
+    font-weight: bold; /* Make the title bold */
+    margin-bottom: 8px; /* Space below the title */
+    color: #222; /* Dark gray color for the text */
+}
+
+/* 🎯 This styles the smaller text under the title */
+.sectionSubtitle {
+    text-align: center; /* Center the text */
+    font-size: 1.1rem; /* Medium size text */
+    margin-bottom: 30px; /* Add more space below */
+    color: #444; /* Slightly lighter gray */
+}
+
+/* 🎯 Main container for the haircut carousel */
+.haircutCarouselSection {
+    background: url("/images/hero-bg.jpg") center/cover no-repeat;
+    padding: 40px 20px;
+}
+
+/* 🎯 Big title */
+.sectionTitle {
     text-align: center;
     font-size: 2rem;
     font-weight: bold;
     margin-bottom: 8px;
     color: #222;
-  }
-  
-  .sectionSubtitle {
+}
+
+/* 🎯 Subtitle under the title */
+.sectionSubtitle {
     text-align: center;
     font-size: 1.1rem;
     margin-bottom: 30px;
     color: #444;
-  }
-  
-  .haircutCard {
-    background: white; /* ✅ White card */
+}
+
+/* 🎯 Haircut card container */
+.haircutCard {
+    background: white;
     border-radius: 10px;
-    overflow: hidden;
     text-align: center;
-    padding: 15px;
+    padding: 15px 15px 20px; /* extra bottom padding for text spacing */
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
-  
-  .haircutCard:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
-  }
-  
-  .haircutCard img {
+
+    position: relative;
+    overflow: visible; /* allow image overlap */
+    padding-top: 50px; /* space for image to pop above card */
+}
+
+/* 🎯 Haircut image */
+.haircutCard img {
     width: 100%;
     height: auto;
     border-radius: 8px;
-    margin-bottom: 10px;
-  }
-  
-  .haircutCard h3 {
+
+    position: relative;
+    top: -30px; /* small lift, no head cut-off */
+
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* 🎯 Hover effect on image */
+.haircutCard:hover img {
+    transform: translateY(-5px) scale(1.03);
+}
+
+/* 🎯 Haircut name/title */
+.haircutCard h3 {
     font-size: 1.2rem;
     font-weight: bold;
+    margin-top: -10px; /* pull closer to image */
     margin-bottom: 5px;
     color: #222;
-  }
-  
-  .haircutCard p {
+}
+
+/* 🎯 Haircut description */
+.haircutCard p {
     font-size: 0.95rem;
     color: #555;
-  }
-  
+}
