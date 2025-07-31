@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "./ServicesSection.module.css";
+import { Link } from "react-router-dom";
 
 type Service = {
   title: string;
@@ -8,11 +9,11 @@ type Service = {
 };
 
 const services: Service[] = [
-  { title: "Hair Care", img: "/images/hair-care.png", link: "#" },
-  { title: "Skin Care", img: "/images/skin-care.png", link: "#" },
-  { title: "Body Care", img: "/images/body-care.png", link: "#" },
-  { title: "Bridal Make Up", img: "images/bridal-care.png", link: "#" },
-  {title: "Treatment", img: "images/treatment.png", link: "#" }
+  { title: "Hair Care", img: "/services/hair-care.png", link: "/hair-care" },
+  { title: "Skin Care", img: "/services/skin-care.png", link: "#" },
+  { title: "Body Care", img: "/services/body-care.png", link: "#" },
+  { title: "Bridal Make Up", img: "services/bridal-care.png", link: "#" },
+  {title: "Treatment", img: "services/treatment.png", link: "#" }
 ];
 
 const ServicesSection: React.FC = () => {
@@ -24,15 +25,17 @@ const ServicesSection: React.FC = () => {
       </p>
 
       <div className={styles.grid}>
-        {services.map((service, index) => (
-          <div className={styles.card} key={index}>
+
+        
+      {services.map((service, index) => (
+        <Link to={service.link} key={index} className={styles.card}>
           <img src={service.img} alt={service.title} />
           <div className={styles["card-text"]}>
             <h3>{service.title}</h3>
-            <a href={service.link}>Know More »</a>
+            <span>Know More »</span>
           </div>
-        </div>
-        ))}
+        </Link>
+      ))}
       </div>
 
       <div style={{ textAlign: "center" }}>
