@@ -61,9 +61,9 @@ const Navbar = () => {
             {/* {item.hasDropdown && <FiChevronDown className={styles.chevron} />} */}
           </a>
         ))}
-        <a href="#" className={styles.bookAppointmentMobile}>
+        <button className="bridal-btn">
           Book Appointment
-        </a>
+        </button>
       </nav>
     </header>
   );
