@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import styles from './Navbar.module.css';
-import { FiMenu, FiX,  FiChevronDown } from 'react-icons/fi';
+import { FiMenu, FiX,  } from 'react-icons/fi';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -45,7 +45,7 @@ const Navbar = () => {
         {navItems.map((item, idx) => (
           <a key={idx} href="#" className={styles.link}>
             {item.name}
-            {item.hasDropdown && <FiChevronDown className={styles.chevron} />}
+            {/* {item.hasDropdown && <FiChevronDown className={styles.chevron} />} */}
           </a>
         ))}
       </nav>
@@ -58,7 +58,7 @@ const Navbar = () => {
         {navItems.map((item, idx) => (
           <a key={idx} href="#" className={styles.link}>
             {item.name}
-            {item.hasDropdown && <FiChevronDown className={styles.chevron} />}
+            {/* {item.hasDropdown && <FiChevronDown className={styles.chevron} />} */}
           </a>
         ))}
         <a href="#" className={styles.bookAppointmentMobile}>

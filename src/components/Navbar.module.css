@@ -88,8 +88,11 @@
 }
 
 .chevron {
-  margin-left: 4px;
+  margin-left: 70px;
   font-size: 12px;
+  vertical-align: middle; /* ✅ aligns arrow with text */
+  position: relative;
+  top: -18px; 
 }
 
   /* Desktop styles */
