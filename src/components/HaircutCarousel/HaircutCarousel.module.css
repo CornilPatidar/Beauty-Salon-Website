@@ -1,0 +1,54 @@
+.haircutCarouselSection {
+    background: url("/images/hero-bg.jpg") center/cover no-repeat; /* ✅ Use your background image */
+    padding: 40px 20px;
+  }
+  
+  .sectionTitle {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #222;
+  }
+  
+  .sectionSubtitle {
+    text-align: center;
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+    color: #444;
+  }
+  
+  .haircutCard {
+    background: white; /* ✅ White card */
+    border-radius: 10px;
+    overflow: hidden;
+    text-align: center;
+    padding: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .haircutCard:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+  }
+  
+  .haircutCard img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 10px;
+  }
+  
+  .haircutCard h3 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #222;
+  }
+  
+  .haircutCard p {
+    font-size: 0.95rem;
+    color: #555;
+  }
+  
