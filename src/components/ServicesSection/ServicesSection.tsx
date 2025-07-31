@@ -11,7 +11,8 @@ const services: Service[] = [
   { title: "Hair Care", img: "/images/hair-care.png", link: "#" },
   { title: "Skin Care", img: "/images/skin-care.png", link: "#" },
   { title: "Body Care", img: "/images/body-care.png", link: "#" },
-  { title: "Bridal Make Up", img: "images/bridal-care.png", link: "#" }
+  { title: "Bridal Make Up", img: "images/bridal-care.png", link: "#" },
+  {title: "Treatment", img: "images/treatment.png", link: "#" }
 ];
 
 const ServicesSection: React.FC = () => {

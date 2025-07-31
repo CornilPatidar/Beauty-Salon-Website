@@ -57,7 +57,7 @@
   /* Desktop: 4 per row */
   @media (min-width: 1024px) {
     .grid {
-      grid-template-columns: repeat(4, 1fr);
+      grid-template-columns: repeat(5, 1fr);
     }
   }
   
@@ -71,7 +71,7 @@
     box-shadow: 0 4px 20px rgba(0,0,0,0.15);
     cursor: pointer;
     aspect-ratio: 1 / 1; /* Forces square shape */
-    max-width: 260px;   /* Make them smaller */
+    max-width: 360px;   /* Make them smaller */
   }
 
   .card:hover {

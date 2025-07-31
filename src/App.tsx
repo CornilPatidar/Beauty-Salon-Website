@@ -4,6 +4,7 @@ import HeroSection from "@/components/HeroSection/HeroSection";
 import BridalSection from "@/components/BridalSection/BridalSection"
 import Navbar from "@/components/Navbar";
 import BrandsSection from "@/components/BrandsSection/BrandsSection";
+import FooterSection from "@/components/FooterSection/FooterSection";
 
 function App() {
   return (
@@ -23,22 +24,8 @@ function App() {
       <HeroSection />
       <BridalSection /> 
       <BrandsSection />
-      
-
-         {/* Hero Section */}
-         <main className="hero">
-        <div className="hero-content">
-          <h1 className="text-red-100">Glow With Confidence</h1>
-          <p>Experience luxury beauty treatments tailored just for you.</p>
-          <button className="hero-btn">Explore Services</button>
-        </div>
-      </main>
-
-
-      {/* Footer */}
-      <footer className="footer">
-        <p>&copy; 2025 KumKum Beauty. All rights reserved.</p>
-      </footer>
+      <FooterSection />
+    
     </div>
   );
 }
