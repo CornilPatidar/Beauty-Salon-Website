@@ -11,15 +11,7 @@ import { cn } from "@/lib/utils";
 
 export default function BookNowForm() {
   const [date, setDate] = useState<Date>();
-  const services = [
-    { value: "haircut", label: "Haircut" },
-    { value: "facial", label: "Facial" },
-    { value: "bridal-makeup", label: "Bridal Makeup" },
-    { value: "hair-color", label: "Hair Color" },
-    { value: "spa", label: "Spa Treatment" },
-  ];
-
-  const [selectedService, setSelectedService] = useState("");
+ 
 
   return (
     <div className={styles.formContainer}>
