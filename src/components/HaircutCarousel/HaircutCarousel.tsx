@@ -16,22 +16,27 @@ const haircuts = [
   {
     img: "/images/haircuts/bixie.png",
     title: "Layers With Step Cut",
-    desc: "Edgy • Textured • Trendy",
+    desc: "Voluminous • Flowing • Face-Framing",
   },
   {
     img: "/images/haircuts/angled-bob.png",
     title: "Angled Bob",
-    desc: "Classic • Professional • Stylish",
+    desc: "Sharp • Modern • Sleek",
   },
   {
     img: "/images/haircuts/shoulder-bangs.png",
     title: "Shoulder Length Layers with Bangs",
-    desc: "Effortless • Soft • Textured",
+    desc: "Soft • Youthful • Effortless",
   },
   {
     img: "/images/haircuts/curly-bob.png",
-    title: "Curly Layered Bob with Bangs",
-    desc: "Classic • Professional • Stylish",
+    title: "Multi Layer Cut",
+    desc: "Bouncy • Defined • Playful",
+  },
+  {
+    img: "/images/haircuts/shag-cut.png",
+    title: "Shag-Cut",
+    desc: "Choppy • Layered • Textured",
   },
 ];
 
@@ -50,7 +55,7 @@ export default function HaircutCarousel() {
       {/* Swiper: The sliding picture component */}
       <Swiper
         modules={[Navigation]} // Add arrow navigation
-        navigation // Show left/right arrows
+        navigation={window.innerWidth > 768} // enable nav only for desktop
         spaceBetween={20} // Space between each card in pixels
         slidesPerView={4} // How many cards to show at the same time (for big screens)
         

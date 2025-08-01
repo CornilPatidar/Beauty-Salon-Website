@@ -1,32 +1,15 @@
-/* 🎯 This is the main container for the haircut carousel section */
-.haircutCarouselSection {
-    /* Use a background image that covers the whole section and stays centered */
-    background: url("/images/hero-bg.jpg") center/cover no-repeat;
-    /* Add padding inside the section: 40px top/bottom, 20px left/right */
-    padding: 40px 20px;
-}
-
-/* 🎯 This styles the big title text (e.g., "Explore Women's Haircuts") */
-.sectionTitle {
-    text-align: center; /* Put the text in the middle horizontally */
-    font-size: 2rem; /* Make the title big */
-    font-weight: bold; /* Make the title bold */
-    margin-bottom: 8px; /* Space below the title */
-    color: #222; /* Dark gray color for the text */
-}
-
-/* 🎯 This styles the smaller text under the title */
-.sectionSubtitle {
-    text-align: center; /* Center the text */
-    font-size: 1.1rem; /* Medium size text */
-    margin-bottom: 30px; /* Add more space below */
-    color: #444; /* Slightly lighter gray */
-}
-
 /* 🎯 Main container for the haircut carousel */
 .haircutCarouselSection {
     background: url("/images/hero-bg.jpg") center/cover no-repeat;
     padding: 40px 20px;
+}
+
+/* Hide navigation buttons on mobile */
+@media (max-width: 768px) {
+  .swiper-button-next,
+  .swiper-button-prev {
+    display: none !important;
+  }
 }
 
 /* 🎯 Big title */
@@ -73,9 +56,7 @@
 }
 
 /* 🎯 Hover effect on image */
-.haircutCard:hover img {
-    transform: translateY(-5px) scale(1.03);
-}
+
 
 /* 🎯 Haircut name/title */
 .haircutCard h3 {
