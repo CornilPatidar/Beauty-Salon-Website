@@ -15,7 +15,7 @@ import styles from "./HaircutCarousel.module.css";
 const haircuts = [
   {
     img: "/images/haircuts/bixie.png",
-    title: "Bixie",
+    title: "Layers With Step Cut",
     desc: "Edgy • Textured • Trendy",
   },
   {
