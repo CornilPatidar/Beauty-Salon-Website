@@ -10,6 +10,7 @@ import BrandsSection from "@/components/Sections/BrandsSection/BrandsSection";
 import FooterSection from "@/components/Sections/FooterSection/FooterSection";
 
 import HairCare from "@/pages/haircare/HairCare";
+import Book from "@/pages/book/Book";
 
 // ✅ Home page as a separate component so routing is clean
 function HomePage() {
@@ -50,6 +51,7 @@ function App() {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/hair-care" element={<HairCare />} />
+        <Route path="/book" element={<Book />} /> {/* ✅ new route */}
         {/* Add more pages here later */}
       </Routes>
 

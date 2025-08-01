@@ -33,10 +33,10 @@ const Navbar = () => {
         <button className={styles.menuToggle} onClick={() => setIsOpen(!isOpen)}>
           {isOpen ? <FiX /> : <FiMenu />}
         </button>
-        <div className={styles.logo}>KumKum Beauty</div>
+        <div className={styles.logo}><a href="/">KumKum Beauty</a></div>
         <div className={styles.icons}>
          
-          <button className={styles.bookButton}>Book Reservation</button>
+          <button className={styles.bookButton}  onClick={() => window.location.href = "/book" }>Book Reservation</button>
         </div>
       </div>
 
@@ -61,7 +61,7 @@ const Navbar = () => {
             {/* {item.hasDropdown && <FiChevronDown className={styles.chevron} />} */}
           </a>
         ))}
-        <button className="bridal-btn">
+        <button className="bridal-btn" onClick={() => window.location.href = "/book"}>
           Book Appointment
         </button>
       </nav>

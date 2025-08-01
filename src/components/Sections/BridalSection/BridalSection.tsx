@@ -14,7 +14,7 @@ const BridalSection: React.FC = () => {
             team to provide you with exceptional care and beauty on your special
             day.
           </p>
-          <button className="bridal-btn">Book Now</button>
+          <a href="/book" className="bridal-btn">Book Now</a>
         </div>
 
         <div className="bridal-image">

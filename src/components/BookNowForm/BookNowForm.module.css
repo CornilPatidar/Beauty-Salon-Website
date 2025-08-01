@@ -1,0 +1,93 @@
+.formContainer {
+    max-width: 500px;
+    margin: 80px auto;
+    padding: 2.5rem;
+    background: #fff;
+    border-radius: 1rem;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.08); /* softer, larger blur */
+    backdrop-filter: blur(8px); /* subtle glassy touch */
+  }
+  
+  .title {
+    font-size: 2rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #111;
+    letter-spacing: -0.5px; /* modern tighter kerning */
+  }
+  
+  .field {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    margin-bottom: 1.25rem;
+  }
+  
+  .label {
+    font-weight: 500;
+    color: #222;
+    font-size: 0.95rem;
+    letter-spacing: -0.2px;
+  }
+  
+  /* Inputs, Select, Date */
+  .input,
+  .select,
+  .dateButton {
+    border-radius: 0.75rem; /* more rounded like iOS */
+    border: 1px solid #d1d5db;
+    padding: 0.85rem 1rem;
+    font-size: 1rem;
+    background: #f9fafb; /* softer neutral */
+    transition: all 0.2s ease;
+  }
+  
+  .input:focus,
+  .select:focus,
+  .dateButton:focus {
+    border-color: #007aff; /* Apple blue */
+    box-shadow: 0 0 0 3px rgba(0, 122, 255, 0.15);
+    outline: none;
+  }
+  
+  .select {
+    cursor: pointer;
+  }
+  
+  .dateButton {
+    justify-content: flex-start;
+    cursor: pointer;
+  }
+  
+  /* Fixed Location (read-only) */
+  .fixedLocation {
+    font-size: 0.9rem;
+    color: #555;
+    background: #f3f4f6;
+    padding: 0.6rem 0.75rem;
+    border-radius: 0.5rem;
+    border: 1px solid #e5e7eb;
+    pointer-events: none;
+  }
+  
+  /* Submit Button */
+  .submitButton {
+    width: 100%;
+    padding: 1rem;
+    font-size: 1.05rem;
+    font-weight: 600;
+    border-radius: 0.75rem;
+    background: linear-gradient(90deg, #007aff, #0051a8); /* iOS blue */
+    color: #fff;
+    cursor: pointer;
+    margin-top: 1.25rem;
+    transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.2s ease-in-out;
+  }
+  
+  .submitButton:hover {
+    background: linear-gradient(90deg, #0066d6, #004b94);
+    transform: translateY(-1px);
+    box-shadow: 0px 4px 12px rgba(0, 122, 255, 0.3);
+  }
+  

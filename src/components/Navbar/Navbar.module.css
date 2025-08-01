@@ -87,13 +87,38 @@
   color: #ec4899;
 }
 
-.chevron {
-  margin-left: 70px;
-  font-size: 12px;
-  vertical-align: middle; /* ✅ aligns arrow with text */
-  position: relative;
-  top: -18px; 
+/* ============================= */
+/* BRIDAL BUTTON — Red & Gold Shine */
+/* ============================= */
+.bridal-btn {
+  background: linear-gradient(135deg, #b71c1c, #ffcc33, #b71c1c);
+  background-size: 300% 300%;
+  color: #fff;
+  padding: 14px 32px;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  outline: none;
+  box-shadow: 0 4px 15px rgba(183, 28, 28, 0.4);
+  transition: all 0.4s ease;
 }
+
+/* Hover: Shimmer Shine + Lift */
+.bridal-btn:hover {
+  background-position: right center;
+  box-shadow: 0 6px 18px rgba(183, 28, 28, 0.6);
+  transform: translateY(-2px);
+  animation: shine 1.2s ease forwards;
+}
+
+/* Keyframe for gold shimmer */
+@keyframes shine {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 100% 50%; }
+}
+
 
   /* Desktop styles */
   @media (min-width: 768px) {
@@ -170,7 +195,7 @@
   .closeButton {
     position: absolute;
     top: 20px;
-    right: 20px;
+    left: 20px;
     background: none;
     border: none;
     color: white;
