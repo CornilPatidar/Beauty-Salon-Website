@@ -117,7 +117,7 @@ export default function HaircutCarousel() {
       <span>Styling</span>
     </div>
   </div>
-    <button className={styles.btn}>BOOK YOUR PERFECT HAIR DAY</button>
+    <button className={styles.btn} onClick={() => window.location.href = "/book"}>BOOK YOUR PERFECT HAIR DAY</button>
 </div>
 
 

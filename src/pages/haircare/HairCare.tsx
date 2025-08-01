@@ -18,7 +18,7 @@ const HairCare: React.FC = () => {
           </p>
 
           {/* Book Now button */}
-          <button className={styles.bookButton}>Book Now</button>
+          <button className={styles.bookButton} onClick={() => window.location.href = "/book"}>Book Now</button>
         </div>
 
         {/* Right - Image */}
