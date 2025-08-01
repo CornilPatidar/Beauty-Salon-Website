@@ -77,6 +77,46 @@ export default function HaircutCarousel() {
           </SwiperSlide>
         ))}
       </Swiper>
+      <div className={styles.additionalServices}>
+  <h2>Additional women’s haircare services</h2>
+  <p>
+    Need your bangs touched up or your hair formally styled? That’s great! 
+    Just visit your local salon and we’ll be happy to help.
+  </p>
+
+  <div className={styles.serviceList}>
+    <div className={styles.serviceItem}>
+      <img
+        src="/icons/scissors.png"
+        alt="Bang Trim"
+        style={{ width: "48px", height: "48px", objectFit: "contain" }}
+      />
+      <span>Bang Trim</span>
+    </div>
+
+    <div className={styles.serviceItem}>
+      <img
+        src="/icons/shampoo.png"
+        alt="Shampoo"
+        style={{ width: "48px", height: "48px", objectFit: "contain" }}
+      />
+      <span>Shampoo</span>
+    </div>
+
+    <div className={styles.serviceItem}>
+      <img
+        src="/icons/styling.png"
+        alt="Styling"
+        style={{ width: "48px", height: "48px", objectFit: "contain" }}
+      />
+      <span>Styling</span>
+    </div>
+  </div>
+    <button className={styles.btn}>BOOK YOUR PERFECT HAIR DAY</button>
+</div>
+
+
+
     </div>
   );
 }

@@ -9,7 +9,7 @@ import Navbar from "@/components/Navbar/Navbar";
 import BrandsSection from "@/components/Sections/BrandsSection/BrandsSection";
 import FooterSection from "@/components/Sections/FooterSection/FooterSection";
 
-import HairCare from "@/pages/HairCare";
+import HairCare from "@/pages/haircare/HairCare";
 
 // ✅ Home page as a separate component so routing is clean
 function HomePage() {

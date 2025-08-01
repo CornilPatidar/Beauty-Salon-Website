@@ -91,3 +91,138 @@
     font-size: 0.95rem;
     color: #555;
 }
+
+.additionalServices {
+    margin-top: 40px;
+    text-align: center;
+    padding: 50px 20px;
+    border-radius: 0;
+  }
+  
+  .additionalServices h2 {
+    font-size: 3.4rem; 
+    font-weight: 700;
+    color: black;
+    margin-bottom: 10px;
+  }
+  
+  .additionalServices p {
+    font-size: 1.4rem; 
+    color: black;
+    max-width: 1400px;
+    margin: 0 auto 40px;
+  }
+  
+  .serviceList {
+    margin-top: 120px;
+    display: flex;
+    justify-content: space-evenly; /* distribute evenly */
+    align-items: center;
+    flex-wrap: nowrap; /* keep them in one row always */
+  }
+
+  /* Tablet */
+    @media (max-width: 1024px) {
+        
+    .serviceList {
+      gap: 100px; /* smaller gap */      
+      margin-top: 50px; /* smaller gap */
+    }
+  }
+  
+  /* Mobile */
+  @media (max-width: 768px) {
+    .serviceList {
+        flex-direction: column; /* stack them */
+      gap: 40px; /* even smaller gap */
+      margin-top: 50px; /* smaller gap */
+    }
+    .additionalServices h2 {
+        font-size: 2.4rem; 
+        font-weight: 700;
+        margin-bottom: 10px;
+      }
+      .additionalServices p {
+        font-size: 1.4rem; 
+        color: black;
+        max-width: 1400px;
+        margin-bottom: 0px;
+      }
+    
+      
+      
+  }
+  
+  /* Very Small Phones */
+  @media (max-width: 480px) {
+    .serviceList {
+        flex-direction: column; /* still stacked */
+      gap: 20px; /* almost no gap */
+    }
+  }
+  
+  .serviceItem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    min-width: 200px; /* forces equal width for all items */
+  }
+  
+  .serviceItem img {
+    width: 128px;
+    height: 128px;
+    object-fit: contain;
+    margin-bottom: 15px;
+    filter: brightness(0) invert(0); /* makes white on dark bg */
+  }
+  
+  .serviceItem span {
+    font-size: 2.1rem;
+    font-weight: 700;
+    color: black;
+  }
+  .btn {
+    margin-top: 80px;
+    background: linear-gradient(90deg, #0077b6, #00b4d8); /* blue → teal for contrast */
+    color: white;
+    padding: 22px 30px;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  
+  /* Shine Effect */
+  .btn::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -75%;
+    width: 50%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.4);
+    transform: skewX(-20deg);
+  }
+  
+  /* Hover: Shine + Pop */
+  .btn:hover {
+    transform: scale(1.05); /* slight pop-up */
+    box-shadow: 0 6px 15px rgba(0,0,0,0.25);
+  }
+  
+  .btn:hover::before {
+    animation: shine 0.8s ease forwards;
+  }
+  
+  /* Keyframes for Shine */
+  @keyframes shine {
+    100% {
+      left: 125%;
+    }
+  }
+  

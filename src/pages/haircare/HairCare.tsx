@@ -29,6 +29,7 @@ const HairCare: React.FC = () => {
 
       {/* Carousel Section */}
       <HaircutCarousel />
+
     </>
   );
 };
