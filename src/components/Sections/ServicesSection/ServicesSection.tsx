@@ -10,7 +10,7 @@ type Service = {
 
 const services: Service[] = [
   { title: "Hair Care", img: "/services/hair-care.png", link: "/hair-care" },
-  { title: "Skin Care", img: "/services/skin-care.png", link: "#" },
+  { title: "Skin Care", img: "/services/skin-care.png", link: "/skin-care" },
   { title: "Body Care", img: "/services/body-care.png", link: "#" },
   { title: "Bridal Make Up", img: "services/bridal-care.png", link: "#" },
   {title: "Treatment", img: "services/treatment.png", link: "#" }
