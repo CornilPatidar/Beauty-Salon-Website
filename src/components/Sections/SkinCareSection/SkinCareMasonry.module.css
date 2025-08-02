@@ -1,0 +1,137 @@
+.skinCareSection {
+    padding: 40px 20px;
+    text-align: center;
+  }
+  
+  .heading {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .subheading {
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 30px;
+  }
+  
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 20px;
+  }
+  
+  .card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+  }
+  
+  .imageWrapper img {
+    width: 100%;
+    border-radius: 12px;
+    display: block;
+    transition: transform 0.4s ease;
+  }
+  
+  .imageWrapper:hover img {
+    transform: scale(1.05);
+  }
+  
+  .overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  
+  .imageWrapper:hover .overlay {
+    opacity: 1;
+  }
+  
+  .overlay h3 {
+    color: #fff;
+    font-weight: bold;
+    font-size: 1.2rem;
+  }
+  
+  /* Card */
+  .card {
+    background: white;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0px 6px 20px rgba(0,0,0,0.08);
+    transition: all 0.3s ease;
+    cursor: pointer;
+  }
+  
+  .card:hover {
+    box-shadow: 0px 8px 25px rgba(0,0,0,0.15);
+    transform: translateY(-2px);
+  }
+  
+  .image {
+    width: 100%;
+    height: 250px; /* uniform height for first 4 treatments */
+    object-fit: cover;
+    display: block;
+  }
+  
+  .textBox {
+    padding: 14px 16px;
+  }
+  
+  .title {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 6px;
+    color: #111;
+  }
+  
+  .timeBox {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.9rem;
+    color: #444;
+  }
+  
+  .clockIcon {
+    width: 16px;
+    height: 16px;
+    object-fit: contain;
+  }
+
+  .sectionWrapper {
+    width: 100%;
+    background: url("/images/hero-bg.jpg") center/cover no-repeat;
+    padding: 60px 20px;
+  }
+  
+  .titleBox {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  
+  .sectionTitle {
+    text-align: center;
+    font-size: 2.4rem; /* bigger for strong impact */
+    font-weight: 1000; /* maximum bold */
+    margin-bottom: 8px;
+    color: black;
+    letter-spacing: 0.5px;
+  }
+  
+  .sectionSubtitle {
+    text-align: center;
+    font-size: 1.3rem; /* slightly bigger */
+    font-weight: 300; /* thin & light */
+    margin-bottom: 30px;
+    color: rgb(32, 32, 32);
+  }
+  /* Your existing masonry styles remain untouched */
+  

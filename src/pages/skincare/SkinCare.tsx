@@ -1,25 +1,29 @@
 import React from "react";
 import styles from "./SkinCare.module.css";
-import HaircutCarousel from "@/components/HaircutCarousel/HaircutCarousel";
-
+import SkinCareMasonry from "@/components/Sections/SkinCareSection/SkinCareMasonry";
 const SkinCare: React.FC = () => {
   return (
     <>
       {/* Top Section - Text & Image */}
       <div className={styles.container}>
         {/* Left - Text */}
-        <div className={styles.textSection}>
-          <h4 className={styles.subheading}>HAIRCUTS FOR</h4>
-          <h1 className={styles.heading}>Women</h1>
-          <p className={styles.description}>
-            Look and feel your best with women’s skincuts at KumKum Beauty.
-            Whether your skin is long or short, thick or thin, curly or straight,
-            or somewhere in between, you can get the skincut you want at our salon.
-          </p>
+  <div className={styles.textSection}>
+    <h4 className={styles.subheading}>SKIN CARE FOR</h4>
+    <h1 className={styles.heading}>Radiant, Healthy Skin</h1>
+    <p className={styles.description}>
+      Refresh and rejuvenate your skin with our professional skin care treatments at KumKum Beauty.
+      From cleansing facials to advanced treatments, we’ll help you achieve a glowing, healthy look 
+      that’s perfect for your unique skin type.
+    </p>
 
-          {/* Book Now button */}
-          <button className={styles.bookButton} onClick={() => window.location.href = "/book"}>Book Now</button>
-        </div>
+    {/* Book Now button */}
+    <button 
+      className={styles.bookButton} 
+      onClick={() => window.location.href = "/book"}
+    >
+      Book Now
+    </button>
+  </div>
 
         {/* Right - Image */}
         <div className={styles.imageSection}>
@@ -27,8 +31,9 @@ const SkinCare: React.FC = () => {
         </div>
       </div>
 
-      {/* Carousel Section */}
-      <HaircutCarousel />
+      {/* Skin Care Treatments Grid */}
+      <SkinCareMasonry />
+
 
     </>
   );

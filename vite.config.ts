@@ -14,11 +14,4 @@ export default defineConfig({
       "@": path.resolve(__dirname, "./src"),
     },
   },
-  // 👇 This is the important part for SPA fallback
-  server: {
-    historyApiFallback: true
-  },
-  preview: {
-    historyApiFallback: true
-  }
 });
