@@ -1,7 +1,7 @@
 import React from "react";
 import Masonry from "@mui/lab/Masonry";
 import Box from "@mui/material/Box";
-import Typography from "@mui/material/Typography";
+const isMobile = window.innerWidth <= 768; // You can tweak breakpoint
 import styles from "./SkinCareMasonry.module.css";
 import clockIcon from "/icons/clock.webp"; 
 
@@ -16,7 +16,11 @@ const skinServices: SkinService[] = [
   { img: "/images/skin/open-pores.jpg", title: "Open Pores Treatment", time: "40 min" },
   { img: "/images/skin/pimple.webp", title: "Pimple Treatment", time: "45 min" },
   { img: "/images/skin/thermo-herb.jpg", title: "Thermo Herb Treatment", time: "50 min" },
-  { img: "/images/skin/under-eye.jpg", title: "Under Eye Circle Treatment", time: "20 min" },
+  {   img: isMobile 
+    ? "/images/skin/under-eye.jpg"  // Phone
+    : "/images/skin/under-eye.jpeg", // Desktop
+  title: "Under Eye Circle Treatment", 
+  time: "20 min" },
   { img: "/images/skin/pigmentation.jpg", title: "Pigmentation Treatment", time: "35 min" }
 ];
 
@@ -26,12 +30,12 @@ const SkinCareMasonry: React.FC = () => {
     <div className={styles.sectionWrapper}>
       {/* Title Section */}
       <div className={styles.titleBox}>
-        <Typography variant="h4" className={styles.sectionTitle}>
+        <h2  className={styles.sectionTitle}>
           Skin Care Treatments
-        </Typography>
-        <Typography variant="body1" className={styles.sectionSubtitle}>
+        </h2>
+        <p className={styles.sectionSubtitle}>
           Refresh, rejuvenate, and enhance your natural beauty
-        </Typography>
+        </p>
       </div>
 
       {/* Masonry Grid */}
@@ -42,9 +46,9 @@ const SkinCareMasonry: React.FC = () => {
               <img src={item.img} alt={item.title} className={styles.image} />
 
               <div className={styles.textBox}>
-                <Typography variant="h6" className={styles.title}>
+                <h2  className={styles.title}>
                   {item.title}
-                </Typography>
+                </h2>
                 <div className={styles.timeBox}>
                   <img src={clockIcon} alt="Clock" className={styles.clockIcon} />
                   <span>{item.time}</span>

@@ -94,7 +94,7 @@ export default function HaircutCarousel() {
       <img
         src="/icons/scissors.png"
         alt="Bang Trim"
-        style={{ width: "48px", height: "48px", objectFit: "contain" }}
+        style={{ width: "96px", height: "96px", objectFit: "contain" }}
       />
       <span>Bang Trim</span>
     </div>
@@ -103,7 +103,7 @@ export default function HaircutCarousel() {
       <img
         src="/icons/shampoo.png"
         alt="Shampoo"
-        style={{ width: "48px", height: "48px", objectFit: "contain" }}
+        style={{ width: "96px", height: "96px", objectFit: "contain" }}
       />
       <span>Shampoo</span>
     </div>
@@ -112,7 +112,7 @@ export default function HaircutCarousel() {
       <img
         src="/icons/styling.png"
         alt="Styling"
-        style={{ width: "48px", height: "48px", objectFit: "contain" }}
+        style={{ width: "96px", height: "96px", objectFit: "contain" }}
       />
       <span>Styling</span>
     </div>

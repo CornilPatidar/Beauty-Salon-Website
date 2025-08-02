@@ -71,23 +71,68 @@
     pointer-events: none;
   }
   
-  /* Submit Button */
-  .submitButton {
-    width: 100%;
-    padding: 1rem;
-    font-size: 1.05rem;
-    font-weight: 600;
-    border-radius: 0.75rem;
-    background: linear-gradient(90deg, #007aff, #0051a8); /* iOS blue */
-    color: #fff;
+ /* Apple-style Submit Button */
+/* Samsung-style Button */
+.submitButton {
+  width: 100%;
+  padding: 0.9rem 1.2rem;
+  font-size: 1.05rem;
+  font-weight: 600;
+  border-radius: 999px; /* Fully rounded pill */
+  background: linear-gradient(90deg, #00c6ff, #0072ff); /* Bright Samsung blue gradient */
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  margin-top: 1.25rem;
+  transition: all 0.3s ease;
+  letter-spacing: 0.3px;
+  box-shadow: 0 4px 12px rgba(0, 114, 255, 0.3);
+}
+
+.submitButton:hover {
+  background: linear-gradient(90deg, #00b4f0, #0062d9);
+  box-shadow: 0 6px 20px rgba(0, 114, 255, 0.4);
+  transform: translateY(-1px);
+}
+
+.submitButton:active {
+  transform: scale(0.98);
+  box-shadow: 0 3px 8px rgba(0, 114, 255, 0.3);
+}
+
+  
+  /* Dropdown Menu Container */
+.selectContent {
+    border-radius: 0.75rem; /* smooth rounded corners */
+    background: #fff;
+    border: 1px solid #e5e7eb;
+    padding: 0.4rem 0;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+    animation: dropdownFade 0.18s ease-out;
+  }
+  
+  /* Dropdown Items */
+  .selectItem {
+    padding: 0.75rem 1rem;
+    font-size: 0.95rem;
+    color: #111;
     cursor: pointer;
-    margin-top: 1.25rem;
-    transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.2s ease-in-out;
+    transition: background 0.15s ease, transform 0.15s ease;
   }
   
-  .submitButton:hover {
-    background: linear-gradient(90deg, #0066d6, #004b94);
-    transform: translateY(-1px);
-    box-shadow: 0px 4px 12px rgba(0, 122, 255, 0.3);
+  .selectItem:hover {
+    background: #f3f4f6; /* soft hover background */
+    transform: translateX(3px); /* smooth little slide */
   }
   
+  /* Fade + Slide Animation */
+  @keyframes dropdownFade {
+    from {
+      opacity: 0;
+      transform: translateY(-5px) scale(0.98);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+  }

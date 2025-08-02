@@ -64,13 +64,13 @@
     background: white;
     border-radius: 18px;
     overflow: hidden;
-    box-shadow: 0px 6px 20px rgba(0,0,0,0.08);
+    box-shadow: 0px 6px 20px rgba(0,0,0,0.28);
     transition: all 0.3s ease;
     cursor: pointer;
   }
   
   .card:hover {
-    box-shadow: 0px 8px 25px rgba(0,0,0,0.15);
+    box-shadow: 0px 8px 25px rgba(0,0,0,0.50);
     transform: translateY(-2px);
   }
   
@@ -117,21 +117,21 @@
     margin-bottom: 40px;
   }
   
-  .sectionTitle {
-    text-align: center;
-    font-size: 2.4rem; /* bigger for strong impact */
-    font-weight: 1000; /* maximum bold */
-    margin-bottom: 8px;
-    color: black;
-    letter-spacing: 0.5px;
-  }
-  
-  .sectionSubtitle {
-    text-align: center;
-    font-size: 1.3rem; /* slightly bigger */
-    font-weight: 300; /* thin & light */
-    margin-bottom: 30px;
-    color: rgb(32, 32, 32);
-  }
+/* 🎯 Big title */
+.sectionTitle {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 8px;
+  color: #222;
+}
+
+/* 🎯 Subtitle under the title */
+.sectionSubtitle {
+  text-align: center;
+  font-size: 1.1rem;
+  margin-bottom: 30px;
+  color: #444;
+}
   /* Your existing masonry styles remain untouched */
   

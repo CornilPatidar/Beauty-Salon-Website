@@ -114,8 +114,10 @@
   /* Mobile */
   @media (max-width: 768px) {
     .serviceList {
-        flex-direction: column; /* stack them */
-      gap: 40px; /* even smaller gap */
+      display: flex;
+      align-items: center;
+      flex-direction: column; /* stack them */
+      gap: 50px; /* even smaller gap */
       margin-top: 50px; /* smaller gap */
     }
     .additionalServices h2 {
@@ -151,8 +153,8 @@
   }
   
   .serviceItem img {
-    width: 128px;
-    height: 128px;
+    width: 256px;
+    height: 256px;
     object-fit: contain;
     margin-bottom: 15px;
     filter: brightness(0) invert(0); /* makes white on dark bg */

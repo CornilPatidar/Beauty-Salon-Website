@@ -7,11 +7,9 @@ const Navbar = () => {
   const [_isDesktop, setIsDesktop] = useState(false); // eslint-disable-line @typescript-eslint/no-unused-vars
   const navItems = [
     { name: "Services", hasDropdown: true },
-    { name: "Shop", hasDropdown: true },
+    { name: "Hair Care", hasDropdown: true },
+    { name: "Skin Care", hasDropdown: true },
     { name: "Bridal", hasDropdown: false },
-    { name: "Offer", hasDropdown: false },
-    { name: "Franchise", hasDropdown: true },
-    { name: "Salon Locator", hasDropdown: false },
     { name: "Contact", hasDropdown: true }
   ];
 
