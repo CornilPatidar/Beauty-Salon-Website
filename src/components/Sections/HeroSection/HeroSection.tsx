@@ -6,11 +6,13 @@ const HeroSection: React.FC = () => {
     <section className={styles.hero}>
       <div className={styles.overlay}>
         <h1>5‑STAR HAIR DAYS START HERE</h1>
-        <p>Just ask our 15k fans</p>
-        <div className={styles.stars}>⭐⭐⭐⭐⭐</div>
+        <p>Trusted by 15k+ women </p>
+        <div className={styles.stars}> 
+          <span>⭐⭐⭐⭐⭐</span>
+      </div>
         <a href="/book" className={styles.btn}>
-  BOOK YOUR PERFECT HAIR DAY
-</a>
+          <span>BOOK YOUR PERFECT HAIR DAY</span>
+        </a>
       </div>
     </section>
   );

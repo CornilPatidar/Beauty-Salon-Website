@@ -18,7 +18,7 @@ const services: Service[] = [
 
 const ServicesSection: React.FC = () => {
   return (
-    <section className={styles.servicesSection}>
+    <section id="services" className={styles.servicesSection}>
       <h2 className={styles.heading}>Salon’s Services</h2>
       <p className={styles.subheading}>
         Serving Modasa with care and style since day one.

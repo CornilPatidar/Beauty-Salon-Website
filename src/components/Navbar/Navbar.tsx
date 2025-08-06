@@ -6,9 +6,9 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [_isDesktop, setIsDesktop] = useState(false); // eslint-disable-line @typescript-eslint/no-unused-vars
   const navItems = [
-    { name: "Services", hasDropdown: true },
-    { name: "Hair Care", hasDropdown: true },
-    { name: "Skin Care", hasDropdown: true },
+    { name: "Services", hasDropdown: true ,path: "#services" },
+    { name: "Hair Care", hasDropdown: true ,path: "/hair-care" },
+    { name: "Skin Care", hasDropdown: true ,path: "/skin-care" },
     { name: "Bridal", hasDropdown: false },
     { name: "Contact", hasDropdown: true }
   ];
@@ -41,7 +41,7 @@ const Navbar = () => {
       {/* Desktop White Navigation Bar */}
       <nav className={styles.desktopNav}>
         {navItems.map((item, idx) => (
-          <a key={idx} href="#" className={styles.link}>
+          <a key={idx} href={item.path || "#"} className={styles.link}>
             {item.name}
             {/* {item.hasDropdown && <FiChevronDown className={styles.chevron} />} */}
           </a>
