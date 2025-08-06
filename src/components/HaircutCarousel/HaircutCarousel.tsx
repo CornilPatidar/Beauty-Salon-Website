@@ -25,7 +25,7 @@ const haircuts = [
   },
   {
     img: "/images/haircuts/shoulder-bangs.png",
-    title: "Shoulder Length Layers with Bangs",
+    title: "Layers with Bangs",
     desc: "Soft • Youthful • Effortless",
   },
   {
