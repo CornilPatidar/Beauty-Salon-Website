@@ -137,25 +137,83 @@
     }
   }
 
-  /* Add this to your styles file */
+  /* Calendar Popup Styling */
 .calendarPopout {
-  background-color: white !important; /* Forces a solid white background */
-  z-index: 9999 !important; /* Ensures it's on top of everything */
-  backdrop-filter: none !important; /* Remove any backdrop filters */
-}
-
-/* Also, ensure the calendar's background is solid */
-.calendarPopout .react-calendar {
-  background: #ffffff !important;
-}
-
-/* Ensure the popover content has a solid background */
-.calendarPopout [data-slot="popover-content"] {
   background: white !important;
+  border: 1px solid #e5e7eb !important;
+  border-radius: 0.75rem !important;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1) !important;
+  padding: 1rem !important;
+  z-index: 9999 !important;
   backdrop-filter: none !important;
+  min-width: 280px !important;
 }
 
-/* Override any inherited transparency */
-.calendarPopout * {
-  background: inherit !important;
+/* Ensure the calendar component itself has proper styling */
+.calendarPopout > div {
+  background: white !important;
+}
+
+/* Style the calendar table */
+.calendarPopout table {
+  width: 100% !important;
+  border-collapse: collapse !important;
+}
+
+/* Style calendar header */
+.calendarPopout th {
+  padding: 0.5rem !important;
+  text-align: center !important;
+  font-weight: 500 !important;
+  color: #374151 !important;
+  font-size: 0.875rem !important;
+}
+
+/* Style calendar cells */
+.calendarPopout td {
+  padding: 0 !important;
+  text-align: center !important;
+}
+
+/* Style calendar day buttons */
+.calendarPopout button {
+  width: 2.5rem !important;
+  height: 2.5rem !important;
+  border-radius: 50% !important;
+  border: none !important;
+  background: transparent !important;
+  color: #374151 !important;
+  font-size: 0.875rem !important;
+  cursor: pointer !important;
+  transition: all 0.2s ease !important;
+}
+
+.calendarPopout button:hover {
+  background: #f3f4f6 !important;
+}
+
+.calendarPopout button[data-selected="true"] {
+  background: #0072ff !important;
+  color: white !important;
+}
+
+.calendarPopout button[data-today="true"] {
+  background: #f3f4f6 !important;
+  font-weight: 600 !important;
+}
+
+/* Style navigation buttons */
+.calendarPopout button[data-direction] {
+  width: 2rem !important;
+  height: 2rem !important;
+  border-radius: 0.375rem !important;
+}
+
+/* Style month/year display */
+.calendarPopout [data-slot="caption"] {
+  font-weight: 600 !important;
+  font-size: 1rem !important;
+  color: #111827 !important;
+  text-align: center !important;
+  margin-bottom: 0.5rem !important;
 }

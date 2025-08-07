@@ -66,17 +66,13 @@ export default function BookNowForm() {
   align="start"
   side="bottom"
   sideOffset={8}
-  className={cn(
-    "z-50 w-auto bg-white border border-gray-200 rounded-md shadow-md p-2",
-    styles.calendarPopout
-  )}
+  className={styles.calendarPopout}
 >
   <Calendar
     mode="single"
     selected={date}
     onSelect={setDate}
     initialFocus
-    className="rounded-md [&_table]:w-full [&_th]:text-sm [&_td]:text-sm [&_td]:h-10 [&_td]:w-10 [&_td]:text-center [&_button]:rounded-full [&_button]:hover:bg-gray-100"
   />
 </PopoverContent>
         </Popover>
