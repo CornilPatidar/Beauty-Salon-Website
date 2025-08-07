@@ -147,17 +147,26 @@
   z-index: 9999 !important;
   backdrop-filter: none !important;
   min-width: 280px !important;
+  height: 320px !important; /* Fixed height to prevent layout shifts */
+  display: flex !important;
+  flex-direction: column !important;
 }
 
 /* Ensure the calendar component itself has proper styling */
 .calendarPopout > div {
   background: white !important;
+  flex: 1 !important;
+  display: flex !important;
+  flex-direction: column !important;
+  min-height: 0 !important; /* Allow flex item to shrink */
 }
 
 /* Style the calendar table */
 .calendarPopout table {
   width: 100% !important;
   border-collapse: collapse !important;
+  flex: 1 !important;
+  min-height: 0 !important;
 }
 
 /* Style calendar header */
@@ -202,6 +211,17 @@
   font-weight: 600 !important;
 }
 
+/* Style disabled (past) dates */
+.calendarPopout button[disabled] {
+  color: #9ca3af !important;
+  cursor: not-allowed !important;
+  opacity: 0.5 !important;
+}
+
+.calendarPopout button[disabled]:hover {
+  background: transparent !important;
+}
+
 /* Style navigation buttons */
 .calendarPopout button[data-direction] {
   width: 2rem !important;
@@ -216,4 +236,8 @@
   color: #111827 !important;
   text-align: center !important;
   margin-bottom: 0.5rem !important;
+  height: 2rem !important; /* Fixed height for consistent spacing */
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
 }
