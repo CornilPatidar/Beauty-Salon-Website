@@ -68,7 +68,7 @@ export default function BookNowForm() {
   sideOffset={8}
   className={cn(
     "z-50 w-auto bg-white border border-gray-200 rounded-md shadow-md p-2",
-    "calendarPopout" // <-- Add this custom class
+    styles.calendarPopout
   )}
 >
   <Calendar

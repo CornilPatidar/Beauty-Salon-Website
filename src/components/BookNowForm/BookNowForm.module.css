@@ -136,3 +136,26 @@
       transform: translateY(0) scale(1);
     }
   }
+
+  /* Add this to your styles file */
+.calendarPopout {
+  background-color: white !important; /* Forces a solid white background */
+  z-index: 9999 !important; /* Ensures it's on top of everything */
+  backdrop-filter: none !important; /* Remove any backdrop filters */
+}
+
+/* Also, ensure the calendar's background is solid */
+.calendarPopout .react-calendar {
+  background: #ffffff !important;
+}
+
+/* Ensure the popover content has a solid background */
+.calendarPopout [data-slot="popover-content"] {
+  background: white !important;
+  backdrop-filter: none !important;
+}
+
+/* Override any inherited transparency */
+.calendarPopout * {
+  background: inherit !important;
+}
