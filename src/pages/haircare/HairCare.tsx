@@ -1,10 +1,11 @@
 import React from "react";
 import styles from "./HairCare.module.css";
 import HaircutCarousel from "@/components/HaircutCarousel/HaircutCarousel";
-
+import ScrollToTop from '@/components/ScrollToTop';
 const HairCare: React.FC = () => {
   return (
     <>
+    <ScrollToTop />
       {/* Top Section - Text & Image */}
       <div className={styles.container}>
         {/* Left - Text */}

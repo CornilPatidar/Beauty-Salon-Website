@@ -13,7 +13,6 @@ const services: Service[] = [
   { title: "Skin Care", img: "/services/skin-care.png", link: "/skin-care" },
   { title: "Body Care", img: "/services/body-care.png", link: "#" },
   { title: "Bridal Make Up", img: "services/bridal-care.png", link: "#" },
-  {title: "Treatment", img: "services/treatment.png", link: "#" }
 ];
 
 const ServicesSection: React.FC = () => {

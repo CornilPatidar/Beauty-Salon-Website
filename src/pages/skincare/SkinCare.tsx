@@ -1,9 +1,13 @@
 import React from "react";
 import styles from "./SkinCare.module.css";
 import SkinCareMasonry from "@/components/Sections/SkinCareSection/SkinCareMasonry";
+import ScrollToTop from '@/components/ScrollToTop';
+
+
 const SkinCare: React.FC = () => {
   return (
     <>
+<ScrollToTop />
       {/* Top Section - Text & Image */}
       <div className={styles.container}>
         {/* Left - Text */}
