@@ -5,18 +5,18 @@ Modern, responsive beauty salon website for showcasing services, brands, and boo
 🔗 Live Demo: [kumkumbeauty.in](https://kumkumbeauty.in)
 
 ### ✨ Features
-- 📱 Responsive layout with modern UI components
-- 🖼️ Service highlights and image carousels (hero, haircuts, skin care)
-- 📅 Booking form with calendar/date picker
-- 🤝 Brand showcase and quick contact shortcuts
-- 🧭 Client-side routing for sections like Hair Care, Skin Care, and Book Now
+- Responsive layout with modern UI components
+- Service highlights and image carousels (hero, haircuts, skin care)
+- Booking form with calendar/date picker
+- Brand showcase and quick contact shortcuts
+- Client-side routing for sections like Hair Care, Skin Care, and Book Now
 
 ### 🧰 Tech Stack
-- ⚛️ React 18 + TypeScript
-- ⚡ Vite 5 (fast dev server and build)
-- 🎨 Tailwind CSS
-- 🧩 Radix UI/shadcn-style components and MUI where appropriate
-- 🎞️ Embla Carousel / Swiper for sliders
+- React 18 + TypeScript
+- Vite 5 (fast dev server and build)
+- Tailwind CSS
+- Radix UI/shadcn-style components and MUI where appropriate
+- Embla Carousel / Swiper for sliders
 
 ### 🚀 Getting Started
 1) Install dependencies
@@ -33,10 +33,10 @@ http://localhost:5173
 ```
 
 ### 🛠️ Scripts
-- ▶️ dev: start the Vite dev server
-- 🏗️ build: type-check and create a production build
-- 👀 preview: preview the production build locally
-- 🧹 lint: run ESLint
+- dev: start the Vite dev server
+- build: type-check and create a production build
+- preview: preview the production build locally
+- lint: run ESLint
 
 ```
 npm run dev
