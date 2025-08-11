@@ -1,21 +1,63 @@
-# React + TypeScript + Vite
+## Kumkum Beauty — Salon Website (React + TypeScript + Vite)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Modern, responsive beauty salon website for showcasing services, brands, and booking appointments.
 
-While this project uses React, Vite supports many popular JS frameworks. [See all the supported frameworks](https://vitejs.dev/guide/#scaffolding-your-first-vite-project).
+Live Demo: [kumkumbeauty.in](https://kumkumbeauty.in)
 
-## Deploy Your Own
+### Features
+- Responsive layout with modern UI components
+- Service highlights and image carousels (hero, haircuts, skin care)
+- Booking form with calendar/date picker
+- Brand showcase and contact shortcuts
+- Client-side routing for sections like Hair Care, Skin Care, and Book Now
 
-Deploy your own Vite project with Vercel.
+### Tech Stack
+- React 18 + TypeScript
+- Vite 5 (fast dev server and build)
+- Tailwind CSS
+- Radix UI/shadcn-style components and MUI where appropriate
+- Embla Carousel / Swiper for sliders
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/vercel/examples/tree/main/framework-boilerplates/vite-react&template=vite-react)
-
-_Live Example: https://vite-react-example.vercel.app_
-
-### Deploying From Your Terminal
-
-You can deploy your new Vite project with a single command from your terminal using [Vercel CLI](https://vercel.com/download):
-
-```shell
-$ vercel
+### Getting Started
+1) Install dependencies
 ```
+npm install
+```
+2) Start the dev server
+```
+npm run dev
+```
+3) Open the app
+```
+http://localhost:5173
+```
+
+### Scripts
+- dev: start the Vite dev server
+- build: type-check and create a production build
+- preview: preview the production build locally
+- lint: run ESLint
+
+```
+npm run dev
+npm run build
+npm run preview
+npm run lint
+```
+
+### Project Structure (high level)
+- `src/components` — UI components (navbar, hero, carousels, booking form, sections)
+- `src/pages` — Routed pages (`haircare`, `skincare`, `book`)
+- `public` — Static assets (images, icons, brand logos)
+- `src/styles` — Global and module CSS
+
+### Deployment
+- Optimized for static hosting. A `vercel.json` is included; deploy easily with Vercel.
+- Build and deploy:
+```
+npm run build
+```
+Upload the `dist` folder to your hosting provider, or use the Vercel CLI.
+
+### License
+This project is proprietary to Kumkum Beauty. All rights reserved.
