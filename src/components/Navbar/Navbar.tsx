@@ -13,8 +13,8 @@ const Navbar = () => {
     { name: "Services", hasDropdown: true, path: "#services" },
     { name: "Hair Care", hasDropdown: true, path: "/hair-care" },
     { name: "Skin Care", hasDropdown: true, path: "/skin-care" },
-    { name: "Bridal", hasDropdown: false, path: "/bridal" },
-    { name: "Contact", hasDropdown: true, path: "/contact" }
+    { name: "Bridal", hasDropdown: false },
+    { name: "Contact", hasDropdown: true}
   ];
 
   useEffect(() => {
