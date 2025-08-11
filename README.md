@@ -42,7 +42,7 @@ http://localhost:5173
 npm run dev
 npm run build
 npm run preview
-npm run lint
+npm run lint 
 ```
 
 ### 🗂️ Project Structure (high level)
